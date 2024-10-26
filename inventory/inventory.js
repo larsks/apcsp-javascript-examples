@@ -1,10 +1,10 @@
 require('../codehs');
 
-var ITEMS_IN_INVENTORY = 20;
+let ITEMS_IN_INVENTORY = 20;
 
 while (ITEMS_IN_INVENTORY > 0) {
     println("we have " + ITEMS_IN_INVENTORY + " in inventory ");
-    var items = readInt("how many would you like to buy? ");
+    const items = readInt("how many would you like to buy? ");
     if (ITEMS_IN_INVENTORY >= items) {
 
         ITEMS_IN_INVENTORY = ITEMS_IN_INVENTORY - items;
