@@ -1,7 +1,7 @@
 {
-  "name": "mealtime",
+  "name": "inventory",
   "version": "1.0.0",
-  "main": "mealtime.js",
+  "main": "inventory.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
