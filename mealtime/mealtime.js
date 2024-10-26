@@ -5,7 +5,7 @@ recommending a meal. For example if the meal was breakfast, you could say
 something like, "How about some avocado on toast?"
 */
 
-const readlineSync = require("readline-sync");
+require("../codehs");
 
 /*
 Our mealMenu() function returns an integer representing the
@@ -54,19 +54,6 @@ const SNACKS = [
 	"Candy corn",
 	"Tacquitos",
 ];
-
-function println(msg) {
-	console.log(msg === undefined ? "" : msg);
-}
-
-function readLine(prompt) {
-	return readlineSync.question(prompt);
-}
-
-function readInt(prompt) {
-	const val = readlineSync.question(prompt);
-	return Number.parseInt(val);
-}
 
 function start() {
 	let mealName;
