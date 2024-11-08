@@ -1,6 +1,18 @@
 require("../codehs");
 
+function new_change(q, d, n, c) {
+	return {
+		quarters: q,
+		dimes: d,
+		nickels: n,
+		cents: c,
+		coins: q + d + n + c,
+	};
+}
+
 function how_many_coins(change) {
+	if (Number.isNaN(Number.parseFloat(change)) || change < 0)
+		return new_change(0, 0, 0, 0);
 	let cents = Math.round(change * 100);
 	let quarters, dimes, nickels;
 
@@ -12,35 +24,7 @@ function how_many_coins(change) {
 	cents = cents - 5 * nickels;
 
 	//println("Q " + quarters + " D " + dimes + " N " + nickels + " P " + cents);
-	const coins = quarters + dimes + nickels + cents;
-	return coins;
+	return new_change(quarters, dimes, nickels, cents);
 }
 
-function start() {
-	const tests = [
-		[0.01, 1],
-		[0.05, 1],
-		[0.1, 1],
-		[0.25, 1],
-		[0.04, 4],
-		[0.99, 9],
-	];
-
-	let failed = 0;
-	let	passed = 0;
-	let total = 0;
-
-	for (testparms of tests) {
-		total++;
-		const res = how_many_coins(testparms[0]);
-		if (res !== testparms[1]) {
-			failed++;
-			println(`FAILED! given input ${testparms[0]} expected ${testparms[1]} got ${res}`);
-		} else {
-			passed++;
-		}
-	}
-	println(`total ${total} passed ${passed} failed ${failed}`);
-}
-
-start();
+exports.how_many_coins = how_many_coins;
