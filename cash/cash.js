@@ -14,13 +14,12 @@ function how_many_coins(change) {
 	if (Number.isNaN(Number.parseFloat(change)) || change < 0)
 		return new_change(0, 0, 0, 0);
 	let cents = Math.round(change * 100);
-	let quarters, dimes, nickels;
 
-	quarters = Math.floor(cents / 25);
+	const quarters = Math.floor(cents / 25);
 	cents = cents - 25 * quarters;
-	dimes = Math.floor(cents / 10);
+	const dimes = Math.floor(cents / 10);
 	cents = cents - 10 * dimes;
-	nickels = Math.floor(cents / 5);
+	const nickels = Math.floor(cents / 5);
 	cents = cents - 5 * nickels;
 
 	//println("Q " + quarters + " D " + dimes + " N " + nickels + " P " + cents);
