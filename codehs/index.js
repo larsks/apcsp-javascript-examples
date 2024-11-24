@@ -1,7 +1,7 @@
 /*
  * codehs compatability library
  *
- * This library implements functions decribed in the "User Input" section of the codehs.com
+ * This library implements functions decribed described in the codehs.com
  * "Intro to JavaScript" textbook.
  *
  */
@@ -26,14 +26,23 @@ function readFloat (prompt) {
   return Number.parseFloat(val);
 }
 
+class Randomizer {
+  static nextInt(low, high) {
+    const val = Math.random();
+    return Math.floor((high-low) * val + low);
+  }
+}
+
 module.exports = {
   println: println,
   readLine: readLine,
   readInt: readInt,
   readFloat: readFloat,
+  Randomizer: Randomizer,
 }
 
 global.println = println;
 global.readLine = readLine;
 global.readInt = readInt;
 global.readFloat = readFloat;
+global.Randomizer = Randomizer;

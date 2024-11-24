@@ -82,7 +82,7 @@ function gosearch() {
 }
 
 function gobreakout() {
-  if (Math.random() > 0.8) {
+  if (Randomizer.nextInt(0,100) > 80) {
     println("You break down the door!");
     return true;
   } else {
