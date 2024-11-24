@@ -30,6 +30,8 @@ function start() {
     println(
       "You are locked in a room. To get out you can search or you can try to break out."
     );
+    if (hasKey)
+      println("You have a key.");
     var choice = getNumber("open door = 1, search = 2 or break out = 3? ", 1, 3);
     if (choice == null) {
       break;
