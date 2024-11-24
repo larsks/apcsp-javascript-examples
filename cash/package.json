@@ -1,7 +1,7 @@
 {
   "name": "cash",
   "version": "1.0.0",
-  "main": "cash.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest"
   },

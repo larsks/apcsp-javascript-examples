@@ -1,4 +1,4 @@
-const cash = require("./cash");
+const cash = require(".");
 
 describe("how_many_coins", () => {
 	it.each([
