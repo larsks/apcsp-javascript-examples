@@ -1,0 +1,17 @@
+{
+  "name": "simple_arrays",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "Apache",
+  "description": "",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
