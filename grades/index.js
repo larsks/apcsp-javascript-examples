@@ -1,10 +1,10 @@
 require("../codehs");
 
 function start() {
-  //get number of grades
+  // get number of grades
   const NUMgrades = readInt("How many grades would you like to store? ");
 
-  //ask user for grades until number above is met
+  // ask user for grades until number above is met
   let grades = [];
   for (let i = 0; i < NUMgrades; i++) {
     const grade = readInt(`Enter grade [${i}]: `);
@@ -22,7 +22,7 @@ function start() {
   println("Grades below average: " + gradesBelowAverage(grades, average));
 }
 
-//average of the given grades
+// average of the given grades
 function averageGrade(grades) {
   let total = 0;
   for (let j = 0; j < grades.length; j++) {

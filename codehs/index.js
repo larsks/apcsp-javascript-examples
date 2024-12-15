@@ -3,25 +3,24 @@
  *
  * This library implements functions decribed described in the codehs.com
  * "Intro to JavaScript" textbook.
- *
  */
 
 const readlineSync = require("readline-sync");
 
-function println (msg) {
+function println(msg) {
   console.log(msg === undefined ? "" : msg);
 }
 
-function readLine (prompt) {
+function readLine(prompt) {
   return readlineSync.question(prompt);
 }
 
-function readInt (prompt) {
+function readInt(prompt) {
   const val = readlineSync.question(prompt);
   return Number.parseInt(val);
 }
 
-function readFloat (prompt) {
+function readFloat(prompt) {
   const val = readlineSync.question(prompt);
   return Number.parseFloat(val);
 }
@@ -29,7 +28,7 @@ function readFloat (prompt) {
 class Randomizer {
   static nextInt(low, high) {
     const val = Math.random();
-    return Math.floor((high-low) * val + low);
+    return Math.floor((high - low) * val + low);
   }
 }
 
@@ -39,7 +38,7 @@ module.exports = {
   readInt: readInt,
   readFloat: readFloat,
   Randomizer: Randomizer,
-}
+};
 
 global.println = println;
 global.readLine = readLine;

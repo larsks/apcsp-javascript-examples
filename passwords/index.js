@@ -1,10 +1,9 @@
 require("../codehs");
 
-const SYMBOLS = "!@#$%^&*()_+-={}[]:;<,>.?/~`"
-const DIGITS = "0123456789"
+const SYMBOLS = "!@#$%^&*()_+-={}[]:;<,>.?/~`";
+const DIGITS = "0123456789";
 
-function start()
-{
+function start() {
   while (true) {
     const password = readLine("Enter your password: ");
     if (passwordIsValid(password)) {
@@ -17,15 +16,14 @@ function start()
   println("Your password is valid!");
 }
 
-function passwordIsValid(password)
-{
+function passwordIsValid(password) {
   let uppercaseCount = 0;
   let lowercaseCount = 0;
   let digitCount = 0;
   let symbolCount = 0;
 
-  for (let i=0; i<password.length; i++) {
-    const c = password[i]
+  for (let i = 0; i < password.length; i++) {
+    const c = password[i];
     if (DIGITS.includes(c)) {
       digitCount++;
     } else if (SYMBOLS.includes(c)) {
@@ -37,7 +35,7 @@ function passwordIsValid(password)
     }
   }
 
-  println(`upper ${uppercaseCount} lower ${lowercaseCount} digits ${digitCount} symbols ${symbolCount}`)
+  println(`upper ${uppercaseCount} lower ${lowercaseCount} digits ${digitCount} symbols ${symbolCount}`);
 
   return uppercaseCount > 0 && lowercaseCount > 0 && digitCount > 0 && symbolCount > 0;
 }
